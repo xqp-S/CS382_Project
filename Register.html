@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style_register.css">
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <div class="wrapper">
+        <div class="logo">
+            <a href="index.html"><img src="image/GamesHeavenn.png"></a>
+        </div>
+        <form action="Signup.php" method="post">
+            <h1>Register</h1>
+            <h5>Kindly fill the form to register</h5>
+            <div class="input-box">
+                <input id="Username" type="text" placeholder="Username" name="Username" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input id="Email" type="email" placeholder="Email" name="Email" required>
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input id="password" type="password" placeholder="Password" name="Password" required>
+                <i class="fa-solid fa-lock fa-1"></i>
+            </div>
+            <div class="input-box">
+                <input id="ConfirmPassword" type="password" placeholder="Confirm Password" name="ConfirmPassword" required>
+                <i class="fa-solid fa-lock fa-1"></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+            </div>
+            <div id="emailError" style="color: red;"></div>
+            <button id="btn" type="submit" class="btn">Sign up</button>
+            <div class="register-link">
+                <p>Don you have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>        
+    </div>
+</body>
+
+<script>
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+    const error = getQueryParam('error');
+    if (error === 'user_exists') {
+        document.getElementById('emailError').textContent = 'User already exists.';
+    }
+   else if (error === 'email_taken') {
+        document.getElementById('emailError').textContent = 'Email is already taken.';
+    }else if(error==="passwords"){
+        document.getElementById('emailError').textContent = 'passwords dont match';
+    }
+</script>
+
+</html>
+

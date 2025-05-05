@@ -1,0 +1,94 @@
+.filter-buttons {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px;
+
+   
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 3vh;
+    transition: background-color 0.3s;
+    
+    &:hover {
+        background-color: #0056b3;
+
+    }
+}
+
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.Best_of {
+    h2 {
+        display: flex;
+        justify-content: center;
+        text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.4);
+    }
+}
+
+.game-card {
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    height: 220px;
+    text-align: center;
+    display: none;
+
+    
+    img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        
+    }
+
+    h4 {
+        color: whitesmoke;
+        font-size: 18px;
+        background-color: #818fbc;
+        border-radius: 5px;
+    }
+
+    h5 {
+        color: whitesmoke;
+        font-size: 16px;
+        background-color: #818fbc;
+        border-radius: 5px;
+    }
+    
+    a{
+        color: whitesmoke;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+    .filter-buttons {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .filter-btn {
+        width: 50%; 
+        margin: 10px 0; 
+    }
+}

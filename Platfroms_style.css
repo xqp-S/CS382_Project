@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+
+#search_icon {
+    display: none;
+}
+
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    background-image: url(image/main-background.png);
+    background-size: cover;
+    background-color: #FFFFF7;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.filter-content {
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 10px;
+    
+
+    .main-filter {
+        width: 300px;
+        background-color: #818fbc;
+        padding: 20px;
+        box-shadow: 2px 2px 0 #080808;
+
+        height: 80vh;
+        overflow-y: auto;
+        overflow: hidden;
+        margin-left: 10px;
+
+        h2 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .filter-section {
+            margin-bottom: 10px;
+
+            label {
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 8px;
+                display: block;
+                color: #333;
+            }
+
+            select {
+                width: 50%;
+                padding: 5px;
+                margin-bottom: 10px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 12px;
+            }
+
+            input[type="range"] {
+                width: 100%;
+            }
+
+            #PriceValue {
+                font-weight: bold;
+                color: #333;
+            }
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #218838;
+            }
+        }
+    }
+}
+
+.Home_Catogery {
+    margin-left: 15px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.4);
+    text-align: center;
+
+
+    h1 {
+        display: inline;
+        font-size: 24px;
+    }
+
+    hr {
+        margin-top: 10px;
+        width: 100%;
+        z-index:-1 ;
+    }
+
+    a {
+        color: #272525;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.home_img {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 15px;
+
+    table {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        height: 200px;
+        border-radius: 10px;
+        text-align: center;
+        
+        
+    }
+
+    img {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+
+
+    }
+    
+
+    h5 {
+        color:#0D150A;
+        font-size: 14px;
+        background-color: #C4BADC;
+        border-radius: 5px;
+       margin: 0px;
+        
+    }
+
+    h4 {
+        color:#0D150A;
+        font-size: 16px;
+        background-color: #C4BADC;
+        border-radius: 5px;
+        height: 20px;
+
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.page-link {
+    color: #007bff; 
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+        background-color: #007bff; 
+        color: #ffffff; 
+        cursor: pointer; 
+      }
+  }
+
+footer {
+    align-items: center;
+    background-color: #0a122d;
+    max-width: 100%;
+    overflow: hidden;
+
+    table {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+        padding-bottom: 10px;
+        max-height: 42%;
+        
+        
+
+        td {
+
+            width: 50%;
+
+            .table_head {
+                display: flex;
+                justify-content: space-around;
+                margin: 0 310px;
+
+                h1{
+                    display: block;
+                    font-size: 25px;
+                }
+                h3{
+                    display: block;
+                    font-size: 16px;
+                }
+            }
+
+            #move_O {
+                margin-left: 55px;
+                margin-top: 5px;
+            }
+
+            #move_C {
+                margin-left: 85px;
+                margin-top: 5px;
+            }
+        }
+
+        .logo {
+            text-align: left;
+            padding-top: 5px;
+            padding-left:10px;
+        }
+
+        .Overview {
+            padding-bottom: 5px;
+
+        }
+
+        .Overview-element a {
+            color: #fff;
+            
+
+        }
+
+        .Overview-element a:hover {
+            color: rgb(97, 97, 97);
+            text-decoration: none;
+        }
+
+        .contact {
+            padding-bottom: 5px;
+
+        }
+
+        .Contact-element a {
+            color: #2955e7;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width: 750px) {
+    #search_icon {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+    }
+
+
+   
+
+    .home_img {
+        flex-direction: column;
+        align-items: center;
+
+
+        table {
+            width: 90%;
+            margin-bottom: 20px;
+            padding: 10px 5px;
+            display: flex;
+            justify-content: center;
+
+
+            img {
+                width: 200px;
+                height: 150px;
+            }
+        }
+
+
+
+    }
+
+
+
+    footer {
+        table {
+            .logo img {
+                height: 100px;
+                width: 100px;
+                border-radius: 60px;
+                margin-right: 15px;
+
+            }
+
+            td {
+                .table_head {
+                    margin: 0px;
+                    margin-left: 5px;
+                }
+
+                #move_O {
+                    margin-left: 25px;
+                    margin-top: 5px;
+                }
+
+                #move_C {
+                    margin-left: 45px;
+                    margin-top: 5px;
+                }
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 14px;
+            }
+
+        }
+    }
+}
