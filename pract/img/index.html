@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/mystyle-main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <table class="header" border="0">
+            <tr>
+                <td class="logo"><a href="#"><img src="images/logov2.png"  alt="e-store"></a></td>
+                <td>
+                    <div class="search">
+                        <input type="text" id="searchInput" placeholder='search...'>
+                        <button type="submit" onclick="performSearch()"><img src="images/search-solid.svg" alt="search"></button>
+                    </div>
+                </td>
+               <td>
+                <div style="padding-left: 30px; text-align: center; position: relative;">
+                    <a href="cart.html">
+                        <img src="images/shopping-cart-3.png" alt="CART" style="width: 47px; height: 47px;"><br>
+                        Cart <div id="cart-count" class="cart-count" style="display: none;"><script>totalProductsInCart</script></div>
+                    </a>
+                </div>
+                </td>
+                <td>
+                    <div style="padding-left: 30px; text-align: center; position: relative;">
+                        <a href="wishlist.html">
+                            <img src="images/like-2.png" alt="wishList" style="width:  47px; height: 47px;"><br>
+                            WishList <div id="wishList-count" class="wishList-count" style="display: none;"><script>totalProductsInWishList</script></div>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div class="sign-in-out"   style="display: flex; align-items: center; justify-content: flex-end; position: relative; width: 100%; margin:auto;">
+                        <a href="#" id="avatar-link" style="margin-right: 10px; display: none;">
+                            <img src="images/profile.png" alt="my profile" style="height:50px; width:50px;"><br>
+                            Account
+                        </a>
+                        <div class="signin-out">
+                            <a href="signin.html" id="signin-link">
+                                <img src="images/signin-av.png" alt="sign in" style="height: 47px; width: 47px;"><br>Sign In
+                            </a>
+                            <div style="display: none; position: absolute; top: 60px; left: -10px; width: 620px;">
+                                <button id="signout-button" style="display: flex; align-items: center; background-color: rgb(255, 255, 255); border: none; color: white; border-radius: 5px;">
+                                    <h2 style="margin: 0; color: rgb(41, 41, 41);">Sign Out</h2>
+                                    <img src="images/logout.png" alt="sign out" style="width: 45px; height: 45px; margin-left: 10px;">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </td> 
+                <td>
+                    <div id="add-product"  style="padding-left: 30px; text-align: center; position: relative; display: none;">
+                        <a href="Addproduct.html">
+                            <img src="images/add.png" alt="wishList" style="width:  47px; height:  47px;"><br>
+                            Add Products
+                        </a>
+                    </div>
+                </td> 
+                <td>
+                    <div id="delete-product"  style="padding-left: 30px; text-align: center; position: relative; display: none;">
+                        <a href="Deleteproduct.html">
+                            <img src="images/delete.png" alt="delete product" style="width:  47px; height:  47px;"><br>
+                            Delete Products
+                        </a>
+                    </div>
+                </td> 
+                <td>
+                    <div id="statistics"  style="padding-left: 30px; text-align: center; position: relative; display: none;">
+                        <a href="statistics.html">
+                            <img src="images/chart.png" alt="delete product" style="width:  47px; height: 47px;"><br>
+                            Financial Statistics
+                        </a>
+                    </div>
+                </td>            
+            </tr>
+        </table>
+    </header>
+    <div class="nav-container">
+        <nav>
+            <table class="categories" border="0">
+                <tr>
+                    <td class="c-item"><h4><a href="HA.html">Home Appliances</a></h4></td>
+                    <td class="c-item"><h4><a href="TV.html">TV's</a></h4></td>
+                    <td class="c-item"><h4><a href="Cameras-category.html">Cameras</a></h4></td>
+                    <td class="c-item"><h4><a href="GC-category.html">Games Consoles</a></h4></td>
+                </tr>
+            </table>
+        </nav>
+    </div>
+    
+    <div class="slider-container">
+        <div id="prev-ad" class="button">
+            <button><b>&lt;</b></button>
+        </div>
+        <div class="ad-slider">
+            <img id="ad-image" src="images/ad's/ad-1.png" alt="Advertisement">
+            
+            <div id="next-ad" class="button">
+                <button><b>&gt;</b></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="category-images" style="display: flex; justify-content: space-around; margin: 20px 0;">
+        <div class="category-item" style="text-align: center;">
+            <a href="HA.html"><img src="images/categories-images/ha-cat-2.PNG" alt="Home Appliances" style="border-radius: 50%; width: 150px; height: 150px;">
+                <h4>Home Appliances</h4></a>
+                
+        </div>
+        <div class="category-item" style="text-align: center;">
+           <a href="TV.html"> <img src="images/categories-images/tv-cat-2.PNG" alt="TVs" style="border-radius: 50%; width: 150px; height: 150px;">
+            <h4>TVs</h4></a>
+        </div>
+        <div class="category-item" style="text-align: center;">
+            <a href="Cameras-category.html"><img src="images/categories-images/c-cat-2.PNG" alt="Cameras" style="border-radius: 50%; width: 150px; height: 150px;">
+                <h4>Cameras</h4></a>
+        </div>
+        <div class="category-item" style="text-align: center;">
+           <a href="GC-category.html"> <img src="images/categories-images/gc-cat-2.PNG" alt="Games Consoles" style="border-radius: 50%; width: 150px; height: 150px;">
+            <h4>Games Consoles</h4></a>
+        </div>
+    </div>
+ 
+
+    <!-- Product Display for Each Category -->
+    <div class="category-container-m" style="padding-bottom: 150px;">
+        <a href="HA.html" class="category-link"><div class="category-title">Home Appliances</div></a>
+        <div id="homeappliances-container" class="product-container"></div>
+    </div>
+
+    <div class="category-container-m" style="padding-bottom: 150px;">
+        <a href="TV.html" class="category-link"><div class="category-title">TV's</div></a>
+        <div id="digitalCards-container" class="product-container"></div>
+    </div>
+
+    <div class="category-container-m" style="padding-bottom: 150px;">
+        <a href="Cameras-category.html" class="category-link"><div class="category-title">Cameras</div></a>
+        <div id="cameras-container" class="product-container"></div>
+    </div>
+
+    <div class="category-container-m" style="padding-bottom: 0px;">
+        <a href="GC-category.html" class="category-link"><div class="category-title">Games Consoles</div></a>
+        <div id="gamesConsoles-container" class="product-container"></div>
+    </div>
+    <div class="space"></div>
+
+    <script>
+
+let totalProductsInCart = parseInt(localStorage.getItem('totalProductsInCart')) || 0;
+let totalProductsInWishList = parseInt(localStorage.getItem('totalProductsInWishList')) || 0;
+
+
+// Function to update the cart count in the UI and localStorage
+function updateCartIcon() {
+    const cartIcon = document.getElementById('cart-count'); // Get the cart count element
+    cartIcon.textContent = totalProductsInCart > 0 ? totalProductsInCart : ''; // Update the text content
+    cartIcon.style.display = totalProductsInCart > 0 ? 'block' : 'none'; // Show or hide cart count
+    localStorage.setItem('totalProductsInCart', totalProductsInCart); // Save to localStorage
+}
+
+function updateWishListIcon() {
+    const wishListIcon = document.getElementById('wishList-count'); // Get the wishlist count element
+    wishListIcon.textContent = totalProductsInWishList > 0 ? totalProductsInWishList : ''; // Update the text content
+    wishListIcon.style.display = totalProductsInWishList > 0 ? 'block' : 'none'; // Show or hide wishlist count
+    localStorage.setItem('totalProductsInWishList', totalProductsInWishList); // Save to localStorage
+}
+
+
+// Function to add products to the cart
+function buyProduct(productId) {
+    totalProductsInCart++; // Increment the total products in cart
+    updateCartIcon(); // Update the cart icon
+
+    // Change the button text to "Added to Cart"
+    const buyButton = document.querySelector(`#buy[data-product-id="${productId}"]`);
+    if (buyButton) {
+        buyButton.textContent = "Added to Cart";
+        buyButton.textContent.fontsize = "23px";
+        buyButton.style.backgroundColor = "#4CAF50"; // Change button color to green
+        buyButton.disabled = true; // Optionally disable the button
+    }
+
+}
+
+function addWishList(productId) {
+    totalProductsInWishList++; // Increment the total products in wishlist
+    updateWishListIcon(); // Update the wishlist icon
+
+    // Change the heart icon to "like-solid"
+    const heartButton = document.querySelector(`#wish[data-product-id="${productId}"]`);
+    if (heartButton) {
+        heartButton.innerHTML = '<i class="fa-solid fa-heart" style="color: #0b48a3;"></i>'; // Change to solid heart
+    }
+}
+
+        const homeappliances_discount = [
+        { id: 18, name: 'ONIX VACUUM CLEANER 21 LTR - Powerful 2200W Input', oldPrice: 100, newPrice: 80, imageUrl: 'images/pic/1.png', discount: 20, company: 'Onix', category: 'HomeAppliances', rating: 4.5 },
+        { id: 19, name: 'elba Load Washing Machine ThinQ WiFi 9 kg', oldPrice: 150, newPrice: 112.50, imageUrl: 'images/pic/2.png', discount: 25, company: 'Elba', category: 'HomeAppliances',rating: 3.5 },
+        { id: 20, name: 'HISENSE Refrigerator 7 Cuft Freezer 1.8 Cuft Inverter Color Silver 211 kW', oldPrice: 90, newPrice: 70, imageUrl: 'images/pic/3.png', discount: 22.22, company: 'Hisense', category: 'HomeAppliances' , rating: 4 },
+        { id: 21, name: 'KOOLEN 30 Liter Digital Microwave Oven, 900 Watts Power, 11 Power Levels, 6/7 Auto Menu, With Grill Function, Mirror Finish Door 30 L 900 W', oldPrice: 200, newPrice: 160, imageUrl: 'images/pic/4.png', discount: 20, company: 'Koolen', category: 'HomeAppliances', rating: 3.5  },
+        { id: 22, name: 'GLEM GAS Gas Oven 5 Burners Jumbo 90X60 Steel', oldPrice: 75, newPrice: 60, imageUrl: 'images/pic/fur.png', discount: 20, company: 'Glem Gas', category: 'HomeAppliances',rating: 3 },
+        { id: 23, name: 'KENWOOD Blender, Ice Crush Function, Multi Mill, Grinder, 2 Speeds, 2 L 500 W', oldPrice: 120, newPrice: 90, imageUrl: 'images/pic/6.png', discount: 25, company: 'Kenwood', category: 'HomeAppliances', rating: 3  },
+        { id: 24, name: 'Philips Easy Speed Steam Iron 220 ml 2000 W', oldPrice: 55, newPrice: 50, imageUrl: 'images/pic/iron.png', discount: 9.09, company: 'Philips', category: 'HomeAppliances' , rating: 2 },
+        { id: 25, name: 'LC Countertop Electric Kettle 500ml 500.0 ml', oldPrice: 300, newPrice: 240, imageUrl: 'images/pic/8.png', discount: 20, company: 'LC', category: 'HomeAppliances' , rating: 2.5 },
+        { id: 26, name: 'Techno Best 2 Slice Electric Toaster/Efficient Breakfast Toasting/Breakfast machine with Browning control/Plastic 650 W', oldPrice: 85, newPrice: 65, imageUrl: 'images/pic/9.png', discount: 23.53, company: 'Techno Best', category: 'HomeAppliances', rating: 1.5  },
+        { id: 27, name: 'Rebune Coffee Machine - 1.2L Capacity, 1050W Power, Premium Brewing', oldPrice: 110, newPrice: 88, imageUrl: 'images/pic/10.png', discount: 20, company: 'Rebune', category: 'HomeAppliances', rating: 4  },
+];
+const tv_discount = [
+{ id: 28, name: 'LG 4K Ultra HD Smart LED TV 65 inch', oldPrice: 500, newPrice: 299, imageUrl: 'images/pic/17.png', discount: 20, company: 'LG', category: 'TV', rating: 4 },
+        { id: 29, name: 'Samsung QLED 55 inch Smart TV with 4K Resolution', oldPrice: 299, newPrice: 150, imageUrl: 'images/pic/18.png', discount: 20, company: 'Samsung', category: 'TV', rating: 4  },
+        { id: 30, name: 'Sony Bravia 65 inch LED 4K UHD Smart TV', oldPrice: 300, newPrice: 230, imageUrl: 'images/pic/19.png', discount: 20, company: 'Sony', category: 'TV', rating: 5  },
+        { id: 31, name: '55 Inch 4K UHD Smart TV | 60HZ55-Inch 4K UHD Smart TV - 60Hz, Smart TV with Streaming Support', oldPrice: 120, newPrice: 90, imageUrl: 'images/pic/20.png', discount: 25, company: 'Generic', category: 'TV' , rating: 3 },
+        { id: 32, name: '55" 4K UHD LED Smart Google TV - HDR, Google Assistant, Ultra HD', oldPrice: 55, newPrice: 50, imageUrl: 'images/pic/21.png', discount: 9.09, company: 'Generic', category: 'TV' , rating: 3.5 },
+        { id: 33, name: '65 Inch TV 4K QLED Pro Dolby Vision Atmos Onkyo 2.1CH Slim & Uni-body Google TV, 120HZ', oldPrice: 300, newPrice: 240, imageUrl: 'images/pic/22.png', discount: 20, company: 'Generic', category: 'TV', rating: 3.5  },
+        {id: 34,name: 'TCL 40 Inch 2K Ultra HD Smart Android LED TV With Free Wall Mount - Frameless Design', oldPrice: 150, newPrice: 112.50,imageUrl: 'images/pic/23.png',discount: 25, company: 'TCL', category: 'TV' , rating: 3 }    
+];
+const cameras_discount = [
+{ id: 11, name: 'EOS 2000D DSLR Camera With 18-55 DC Lens 24.1 MP APS-C Sensor Optical Viewfinder', oldPrice: 100, newPrice: 80, imageUrl: 'images/pic/11.png', discount: 20, company: 'Canon', category: 'Cameras' , rating: 4 },
+        { id: 12, name: 'EOS 4000D DSLR With EF-S 18-55mm F/3.5-5.6 III Lens 18MP Built-In Wi-Fi Black', oldPrice: 78, newPrice: 60, imageUrl: 'images/pic/18-c.png', discount: 20, company: 'Canon', category: 'Cameras', rating: 3.5  },
+        { id: 13, name: 'Alpha 7 Iv Full-Frame Mirrorless Interchangeable Lens Camera, 33 Mega Pixel Full-Frame Back-Illuminated Exmor R cmos Image Sensor, Ilce-7M4', oldPrice: 90, newPrice: 70, imageUrl: 'images/pic/13.png', discount: 22.22, company: 'Sony', category: 'Cameras', rating: 3  },
+        { id: 14, name: 'FUJIFILM Digital Camera X-T5 Black - XF16-80MM Kit', oldPrice: 200, newPrice: 160, imageUrl: 'images/pic/14.png', discount: 20, company: 'Fujifilm', category: 'Cameras', rating: 4.5  },
+        { id: 15, name: 'Nikon Z 7II Mirrorless Camera - High-Resolution 45.7MP, 10fps Continuous', oldPrice: 75, newPrice: 60, imageUrl: 'images/pic/15.png', discount: 20, company: 'Nikon', category: 'Cameras', rating: 4  },
+        { id: 16, name: 'Lumix EOS 5D Mark IV DSLR Camera With EF 24-105mm IS USM Lens Fast Versatile Full Frame Camera 30.4 MP 4K Wi-Fi GPS', oldPrice: 77, newPrice: 60, imageUrl: 'images/pic/16.png', discount: 20, company: 'Canon', category: 'Cameras' , rating: 4 },
+        { id: 17, name: 'Alpha 7R V Full Frame Mirrorless Interchangeable Lens Camera With 61.0MP Full-Frame Back-Illuminated Exmor R CMOS Sensor, Black', oldPrice: 77, newPrice: 60, imageUrl: 'images/pic/17-c.png', discount: 20, company: 'Sony', category: 'Cameras', rating: 3.5  },
+];
+const gamesConsloes_discount = [
+{ id: 1, name: 'PlayStation 5 Console (Disc Version) With Controller', oldPrice: 100, newPrice: 80, imageUrl: 'images/pic/pic.png', discount: 20, company: 'Sony', category: 'GameConsoles', rating: 4  },
+        { id: 2, name: 'PlayStation 5 Pro-Console ( Official KSA Version )', oldPrice: 150, newPrice: 112.50, imageUrl: 'images/pic/pro.png', discount: 25, company: 'Sony', category: 'GameConsoles' , rating: 2.5 },
+        { id: 3, name: 'PlayStation 5 Slim Console (International Version) Digital Edition With Controller', oldPrice: 90, newPrice: 70, imageUrl: 'images/pic/slim.png', discount: 22.22, company: 'Sony', category: 'GameConsoles', rating: 3 },
+        { id: 4, name: 'Steam Deck OLED 1 TB Handheld Console', oldPrice: 200, newPrice: 160, imageUrl: 'images/pic/steam.png', discount: 20, company: 'Valve', category: 'GameConsoles', rating: 3  },
+        { id: 5, name: 'Nintendo Switch OLED - 7-inch OLED Display & Adjustable Kickstand', oldPrice: 75, newPrice: 60, imageUrl: 'images/gs-products/nin.png', discount: 20, company: 'Nintendo', category: 'GameConsoles' , rating: 3.5 },
+        { id: 6, name: 'Xbox Series X 1TB Console (Disc Version) With Controller', oldPrice: 120, newPrice: 90, imageUrl: 'images/pic/xbox.png', discount: 25, company: 'Microsoft', category: 'GameConsoles', rating: 4  },
+        { id: 7, name: 'atari Flashback9 Deluxe With 110 Built-In Games', oldPrice: 55, newPrice: 50, imageUrl: 'images/pic/atari.png', discount: 9.09, company: 'Atari', category: 'GameConsoles' , rating: 4.5 },
+        { id: 8, name: 'gameboy 400-In-1 MIni Handheld Gaming Console', oldPrice: 300, newPrice: 240, imageUrl: 'images/pic/gameboy.png', discount: 20, company: 'Nintendo', category: 'GameConsoles', rating: 5  },
+        { id: 9, name: 'Portable PSP Handheld Console - 4.3-inch Display, 8GB Storage, Black', oldPrice: 85, newPrice: 65, imageUrl: 'images/pic/psp.png', discount: 23.53, company: 'Sony', category: 'GameConsoles', rating: 4  },
+        { id: 10, name: 'PlayStation 4 Slim 500GB Console With Controller', oldPrice: 110, newPrice: 88, imageUrl: 'images/pic/ps4.png', discount: 20, company: 'Sony', category: 'GameConsoles' , rating: 4.5 },
+];
+
+
+
+
+
+function performSearch() {
+    const searchInput = document.getElementById('searchInput').value.trim(); // Trim spaces from input
+
+    // Validation: Check if the input is not empty, has a minimum length, and doesn't contain only special characters
+    if (!searchInput) {
+        alert("Please enter a search term."); // Input is empty or only spaces
+    } else if (searchInput.length < 2) {
+        alert("Search term must be at least 2 characters long."); // Input is too short
+    } else if (!/^[a-zA-Z0-9\s]+$/.test(searchInput)) {
+        alert("Search term must contain valid characters only."); // Input contains invalid characters
+    } else {
+        // Redirect to search.html with the search term as a query parameter
+        window.location.href = `search.html?query=${encodeURIComponent(searchInput)}`;
+    }
+}
+
+
+        // Function to display products in a specified container
+        function displayProducts(productArray, containerId) {
+    const productContainer = document.getElementById(containerId);
+    productContainer.innerHTML = ''; // Clear previous products
+
+    // Iterate over the product array and create a product card for each item
+    productArray.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+
+        // Generate the star rating for each product
+        const starsHtml = generateStars(product.rating); // Call generateStars to get the stars HTML
+
+        productCard.innerHTML = `
+            <a href="product-detail.html?id=${product.id}">
+                <img src="${product.imageUrl}" alt="Product ${product.id}" class="product-image" style="width: 150px;">
+                <div class="rating" style="display: flex; align-items: center; margin-top: 10px;">
+                ${starsHtml}
+            </div>
+                <h3 class="product-name">${product.name}</h3>
+                <p class="old-price">${product.oldPrice.toFixed(2)} SR</p>
+                <p class="new-price">${product.newPrice.toFixed(2)} SR</p>
+            </a>
+            <div style="display:flex;">
+                <button id="wish" data-product-id="${product.id}" onclick="addWishList(${product.id})" style="border-radius:50px;">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <button id="buy" data-product-id="${product.id}" onclick="buyProduct(${product.id})" style="width:80%; font-size:23px; font-weight: bold;">
+                    Add to Cart &nbsp;<i class="fa-sharp fa-solid fa-cart-plus"></i>
+                </button>
+            </div>
+            
+        `;
+
+        // Append the product card to the container
+        productContainer.appendChild(productCard);
+    });
+}
+
+
+        // Function to display all products in their respective categories
+        function displayAllProducts() {
+            displayProducts(homeappliances_discount, 'homeappliances-container');
+            displayProducts(tv_discount, 'digitalCards-container');
+            displayProducts(cameras_discount, 'cameras-container');
+            displayProducts(gamesConsloes_discount, 'gamesConsoles-container');
+        }
+
+        function generateStars(rating) {
+    const fullStars = Math.floor(rating); // Number of full stars
+    const hasHalfStar = rating % 1 !== 0; // Whether there's a half star
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0); // Remaining empty stars
+
+    let starsHtml = '';
+
+    // Add full stars
+    for (let i = 0; i < fullStars; i++) {
+        starsHtml += '<i class="fa-solid fa-star" style="color:gold;"></i>';
+    }
+
+    // Add half star if necessary
+    if (hasHalfStar) {
+        starsHtml += '<i class="fa-solid fa-star-half-alt" style="color: gold;"></i>';
+    }
+
+    // Add empty stars
+    for (let i = 0; i < emptyStars; i++) {
+        starsHtml += '<i class="fa-regular fa-star" style="color: gold;"></i>';
+    }
+
+    return starsHtml;
+}
+
+       document.getElementById('avatar-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    const signoutDiv = document.querySelector('.signin-out div'); // Select the sign-out button's container
+    signoutDiv.style.display = signoutDiv.style.display === 'none' ? 'flex' : 'none'; // Toggle visibility
+});
+
+// Sign out functionality
+document.getElementById('signout-button').addEventListener('click', function() {
+    // Update sign-in status in localStorage
+    localStorage.setItem('isSignedIn', 'false'); 
+    localStorage.setItem('isAdmin', 'false');
+    // Show an alert to the user
+    alert('You have signed out.');
+
+    // Update the avatar dynamically
+    const avatar = document.getElementById('avatar-link');
+    avatar.src = 'images/default-avatar.png'; // Set to a default avatar
+    avatar.alt = 'Default Avatar'; // Update alt text for accessibility
+
+    // Hide the sign-out button container
+    const signoutDiv = document.querySelector('.signout');
+    if (signoutDiv) {
+        signoutDiv.style.display = 'none';
+    }
+
+    // Optionally update UI for signed-out state before reload
+    updateSignInUI(); 
+
+    // Refresh the entire page to reflect changes
+    location.reload(); 
+});
+
+// Function to update the cart count in the UI and localStorage
+
+
+// Initialize by displaying all products
+displayAllProducts();
+updateCartIcon();
+updateWishListIcon();
+        
+    </script>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="images/logov2.png" height="150px" width="150px" alt="e-store">
+            </div>
+    
+            <!-- Footer Categories -->
+            <div class="footer-category">
+                <h2>Home Appliances</h2>
+                <ul>
+                    <li><a href="HA.html">Refrigerators</a></li>
+                    <li><a href="HA.html">Washing Machines</a></li>
+                    <li><a href="HA.html">Microwaves</a></li>
+                    <li><a href="HA.html">Blenders</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-category">
+                <h2>TVs</h2>
+                <ul>
+                    <li><a href="TV.html">Smart TVs</a></li>
+                    <li><a href="TV.html">LED TVs</a></li>
+                    <li><a href="TV.html">OLED TVs</a></li>
+                    <li><a href="TV.html">4K TVs</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-category">
+                <h2>Games Consoles</h2>
+                <ul>
+                    <li><a href="GC-category.html">PlayStation</a></li>
+                    <li><a href="GC-category.html">Xbox</a></li>
+                    <li><a href="GC-category.html">Nintendo</a></li>
+                    <li><a href="GC-category.html">Handheld Consoles</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-category">
+                <h2>Cameras</h2>
+                <ul>
+                    <li><a href="Cameras-category.html">DSLR Cameras</a></li>
+                    <li><a href="Cameras-category.html">Mirrorless Cameras</a></li>
+                    <li><a href="Cameras-category.html">Action Cameras</a></li>
+                    <li><a href="Cameras-category.html">Bridge Cameras</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact and Social Section -->
+            <div class="footer-contact">
+                <div class="social-media">
+                    <h2>Find Us</h2>
+                    <a href="https://x.com" target="_blank"><img src="images/social-media/twitter (1).png" alt="X"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="images/social-media/facebook (1).png" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com" target="_blank"><img src="images/social-media/tik-tok (1).png" alt="TikTok"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="images/social-media/instagram (1).png" alt="Instagram"></a>
+                </div>
+    
+                <h3><img src="images/email.png" alt="email"><a href="mailto:myEmail@example.com" class="footer-email">myEmail@example.com</a></h3>
+                <h3><img src="images/support.png" alt="support"><span class="footer-phone">8521336588</span></h3>
+            </div>
+    
+            <!-- Footer About Us Section -->
+            <div class="footer-about">
+                <h2>About</h2>
+                <ul>
+                <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+       
+    </footer>
+    
+
+</body>
+</html>
+
+<script>
+    // Check the sign-in status on page load
+    const isSignedIn = localStorage.getItem('isSignedIn');
+    const isAdmin = localStorage.getItem('isAdmin');
+    // Reset sign-in status when the page is being unloaded
+
+    // Update UI based on sign-in status
+    function updateSignInUI() {
+    const isSignedIn = localStorage.getItem('isSignedIn');
+    const isAdmin = localStorage.getItem('isAdmin');
+    const avatarLink = document.getElementById('avatar-link');
+    const signinLink = document.getElementById('signin-link');
+    const addIcon = document.getElementById('add-product');
+    const deleteIcon = document.getElementById('delete-product');
+    const statIcon = document.getElementById('statistics');
+    if (isSignedIn === 'true') {
+
+        if(isAdmin === 'true'){
+            avatarLink.style.display = 'block'; // Show the avatar
+        signinLink.style.display = 'none';   // Hide the sign-in link
+        avatarLink.href = 'profile.html';
+        addIcon.style.display="block"; 
+        deleteIcon.style.display="block";
+        statIcon.style.display="block";
+        }
+        else{
+            avatarLink.style.display = 'block'; // Show the avatar
+        signinLink.style.display = 'none';   // Hide the sign-in link
+        avatarLink.href = 'profile.html';
+        }
+         // Change to the desired profile page
+    } 
+    else {
+        avatarLink.style.display = 'none';    // Hide the avatar
+        signinLink.style.display = 'block';    // Show the sign-in link
+    }
+}
+
+    // Call the function to update the UI
+    updateSignInUI();
+</script>
+<script>
+    
+   const adImages = [
+    "images/ad's/ad-2.png",
+    "images/ad's/ad-3.png",
+    "images/ad's/ad-4.png",
+    "images/ad's/ad-5.png",
+    "images/ad's/ad-6.png",
+    "images/ad's/ad-7.png",
+    "images/ad's/ad-1.png",
+];
+
+let currentAdIndex = 1;
+let adInterval = 5000; // Time in milliseconds
+let adTimeout; // Variable to hold the timeout ID
+
+function changeAdImage() {
+    currentAdIndex = (currentAdIndex + 1) % adImages.length; // Cycle through the images
+    const adImage = document.getElementById('ad-image');
+    adImage.style.opacity = 0; // Fade out
+
+    setTimeout(() => {
+        adImage.src = adImages[currentAdIndex]; // Change the image
+        adImage.style.opacity = 1; // Fade in
+    }, 1000); // Delay for fade effect
+}
+
+function startAdInterval() {
+    adTimeout = setInterval(changeAdImage, adInterval);
+}
+
+function stopAdInterval() {
+    clearInterval(adTimeout);
+}
+
+// Change the ad image when the next button is clicked
+document.getElementById('next-ad').addEventListener('click', () => {
+    stopAdInterval(); // Stop the interval
+    changeAdImage();  // Change the ad immediately
+    adInterval = 8000; // Set longer interval
+    startAdInterval(); // Restart the interval
+});
+
+// Change the ad image when the previous button is clicked
+document.getElementById('prev-ad').addEventListener('click', () => {
+    stopAdInterval(); // Stop the interval
+    currentAdIndex = (currentAdIndex - 1 + adImages.length) % adImages.length; // Go to previous ad
+    const adImage = document.getElementById('ad-image');
+    adImage.style.opacity = 0; // Fade out
+
+    setTimeout(() => {
+        adImage.src = adImages[currentAdIndex]; // Change the image
+        adImage.style.opacity = 1; // Fade in
+    }, 1000); // Delay for fade effect
+
+    adInterval = 8000; // Set longer interval
+    startAdInterval(); // Restart the interval
+});
+
+// Initial start of the ad interval
+startAdInterval();
+
+
+</script>
+
